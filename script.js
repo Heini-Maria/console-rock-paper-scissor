@@ -10,8 +10,6 @@ function playerPlay () {
     }
     } while (userInput !== 'rock' || userInput !== 'paper' || userInput !== 'scissor');
     } 
-
- 
  
 function computerPlay() {
     let computerChoise = Math.floor(Math.random()*3 +1);
