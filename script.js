@@ -1,19 +1,16 @@
-  
 function playerPlay () {
-    let userInput= prompt("Lets's play! Type in paper, rock or scissor");
+    let userInput;
     do {
-        let userInput =prompt("Lets's play! Type in paper, rock or scissor")
+    userInput = prompt("Type in paper, rock or scissor").toLowerCase();
     if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissor') {
-        let validInput = userInput.toLowerCase();
+        let validInput = userInput;
         return validInput;
     } else {
-        alert("You didn't type rock, paper or scissor")
+        alert("Hey! You didn't type paper, rock or scissor...");
     }
-} while (userInput !== 'rock' || userInput !== 'paper' || userInput !== 'scissor');
-}  
+    } while (userInput !== 'rock' || userInput !== 'paper' || userInput !== 'scissor');
+    } 
 
-
-let playerSelection = playerPlay();
  
  
 function computerPlay() {
@@ -28,9 +25,6 @@ function computerPlay() {
         return 'Computer says no'
     }
 }
-//console.log(computerPlay());
-//let playerSelection = 'paper';
-//playerSelection = playerSelection.toLowerCase();
 
 function singleRound(playerSelection, computerSelection) {
   return computerSelection == playerSelection
@@ -47,20 +41,15 @@ function singleRound(playerSelection, computerSelection) {
     ? `You lost! ${computerSelection} beats ${playerSelection}.`
     : computerSelection == 'paper' && playerSelection == 'scrissor'
     ? `You won! ${playerSelection} beats ${computerSelection}.`
-    : 'computer says no!'
+    : '-------';
 };
 
-
-
 const computerSelection = computerPlay();
-
-//console.log(singleRound(playerSelection, computerSelection));
-//console.log(computerSelection);
 
 function game() {
     let resultArr = [];
 for (let i= 1; i <= 5; i++) { 
-    let result = `round ${i} :${singleRound(playerSelection, computerPlay())};`
+    let result = `round ${i} :${singleRound(playerPlay(), computerPlay())};`
    console.log(result);
    resultArr.push(result); 
     }
