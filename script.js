@@ -50,24 +50,23 @@ const computerSelection = computerPlay();
 
 function game() {
     let resultArr = [];
-for (let i= 1; i <= 5; i++) { 
+    for (let i= 1; i <= 5; i++) { 
     let result = `round ${i} :${singleRound(playerPlay(), computerPlay())};`
-   console.log(result);
-   resultArr.push(result); 
+    console.log(result);
+    resultArr.push(result); 
     }
-    function filterResults(arr, query) {
-        return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));     
-    }
-    const winning = filterResults(resultArr, "won");
-    const losing = filterResults(resultArr, "lost");
-    const even = filterResults(resultArr, "tie");
-
-if(winning.length > losing.length) {
-return "Woohoo! You are the winner of the game!"
-} else if (winning.length == losing.length) {
-return "So tight! the game was a tie!"
-} else {
-return "I'm so sorry! You lost this game :(."
-}
+        function filterResults(arr, query) {
+            return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));     
+        }
+        const winning = filterResults(resultArr, "won");
+        const losing = filterResults(resultArr, "lost");
+        const even = filterResults(resultArr, "tie");
+            if(winning.length > losing.length) {
+            return "Woohoo! You are the winner of the game!"
+            } else if (winning.length == losing.length) {
+            return "So tight! the game was a tie!"
+            } else {
+            return "I'm so sorry! You lost this game :(."
+            }
 }
 console.log(game());
