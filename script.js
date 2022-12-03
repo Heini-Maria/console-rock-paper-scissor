@@ -1,13 +1,19 @@
 function playerPlay () {
     let userInput;
     do {
-    userInput = prompt("Type in paper, rock or scissor").toLowerCase();
-    if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissor') {
+    userInput = prompt("Type in paper, rock or scissor");
+    if (!userInput) {
+        alert("C'mon let's play");
+    }
+    else {
+        userInput = userInput.toLowerCase();
+        if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissor') {
         let validInput = userInput;
         return validInput;
-    } else {
+        } else {
         alert("Hey! You didn't type paper, rock or scissor...");
-    }
+        }
+    }   
     } while (userInput !== 'rock' || userInput !== 'paper' || userInput !== 'scissor');
     } 
  
@@ -37,9 +43,7 @@ function singleRound(playerSelection, computerSelection) {
     ? `You lost! ${computerSelection} beats ${playerSelection}.`
     : computerSelection == 'paper' && playerSelection == 'rock'
     ? `You lost! ${computerSelection} beats ${playerSelection}.`
-    : computerSelection == 'paper' && playerSelection == 'scrissor'
-    ? `You won! ${playerSelection} beats ${computerSelection}.`
-    : '-------';
+    : `You won! ${playerSelection} beats ${computerSelection}.`;
 };
 
 const computerSelection = computerPlay();
@@ -58,7 +62,7 @@ for (let i= 1; i <= 5; i++) {
     const losing = filterResults(resultArr, "lost");
     const even = filterResults(resultArr, "tie");
 
-if(winning.length > losing.length && winning.length >= even.length || even.length > losing.length) {
+if(winning.length > losing.length) {
 return "Woohoo! You are the winner of the game!"
 } else if (winning.length == losing.length) {
 return "So tight! the game was a tie!"
