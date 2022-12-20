@@ -12,8 +12,8 @@ This project was created in Brainnest Frontend Development course. The purpose w
 *plays 5 rounds
 *announces the winner for each round and winner of the whole game
 
-##Technologies
+## Technologies
 *JavaScript
 
-##Personal experience about the project
+## Personal experience about the project
 This was a really good practice using Javascript and gave me a lot more confidence in functions. Also this was the first time I used prompts to collect userinputs. If I would build the project from start I would propably make it more simple. I think especially the part where the all time winner is determined is more complicated than it should. All and all was happy to finish the project and see it working without crashing.
