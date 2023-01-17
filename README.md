@@ -9,13 +9,13 @@ This project was created in the Brainnest Frontend Development course. The purpo
 
 ## Features
 
-*collect userinput from prompts
-*plays 5 rounds
-*announces the winner for each round and winner of the whole game
+* collect userinput from prompts
+* plays 5 rounds
+* announces the winner for each round and winner of the whole game
 
 ## Technologies
 
-*JavaScript
+* JavaScript
 
 ## Personal experience with the project
 
